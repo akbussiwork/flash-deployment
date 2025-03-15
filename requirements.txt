@@ -1,2 +1,11 @@
 flask
 gunicorn
+pip freeze > requirements.txt
+flask
+gunicorn
+numpy
+pandas
+torch
+scikit-learn
+opencv-python
+Pillow
