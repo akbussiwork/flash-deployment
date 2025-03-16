@@ -1,0 +1,4 @@
+web: gunicorn app:app
+git add Procfile
+git commit -m "Fixed Procfile"
+git push origin main
