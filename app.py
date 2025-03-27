@@ -48,7 +48,7 @@ execution_count = None
 
 import json
 
-data = json.loads('{"execution_count": None}')
+data = json.loads('{"execution_count": null}')
 
 
 # In[ ]:
