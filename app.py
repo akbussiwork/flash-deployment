@@ -75,6 +75,29 @@ json_string = json_string.replace("null", "None")  # Replace JavaScript null wit
 data = eval(json_string)  # Safely convert to Python dictionary
 
 print(data)  # Debug ke liye
+import json
+
+json_string = '{"execution_count": null}'
+print("Raw JSON Data:", json_string)  # Debugging ke liye
+
+try:
+    data = json.loads(json_string)
+    print("Parsed Data:", data)
+except json.JSONDecodeError as e:
+    print("JSON Error:", e)
+
+# Flask App Start
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Flask App is Running!"
+
+if __name__ == '__main__':
+    print("Starting Flask App...")  # Debugging ke liye
+    app.run(debug=True)
 
 
 
