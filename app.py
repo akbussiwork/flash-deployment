@@ -68,6 +68,13 @@ data = json.loads('{"execution_count": None}'.replace("None", "None"))
 
 
 # In[ ]:
+import json
+
+json_string = '{"execution_count": null}'
+json_string = json_string.replace("null", "None")  # Replace JavaScript null with Python None
+data = eval(json_string)  # Safely convert to Python dictionary
+
+print(data)  # Debug ke liye
 
 
 
